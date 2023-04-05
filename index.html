@@ -4,45 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Telegram Bot</title>
+    <title></title>
     <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
   </head>
   <body>
-    <button id="main_btn" onclick="sendMessages('Hello, World!');">
+    <button id="main_btn" onclick="sendMessage('Hello, World!');">
       Send «Hello, World!»
     </button>
 
-    <script>
-     
-      /**
-       * By calling this function you can send message to a specific user()
-       * @param {String} the text to send
-       *
-       */
-      function sendMessages(text){
+    <script >
+             function sendMessage(text){
         Telegram.WebApp.sendData(text);
-      }
-
-      function sendMessage(text) {
-
-        let tg = {
-        token: "6208142690:AAHzjuXf33-sPcuBzy8bSFyhmqtKvDuFuBk", // Your bot's token that got from @BotFather
-        chat_id: "1630035239", // The user's(that you want to send a message) telegram chat id
-      };
-
-
-
-        const url = `https://api.telegram.org/bot${tg.token}/sendMessage`; // The url to request
-
-        const obj = {
-          chat_id: tg.chat_id, // Telegram chat id
-          text: text, // The text to send
-        };
-
-        const xht = new XMLHttpRequest();
-        xht.open("POST", url, true);
-        xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-        xht.send(JSON.stringify(obj));
       }
     </script>
   </body>
