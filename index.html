@@ -668,7 +668,7 @@
             }).then(function(result) {
                 onCallback && onCallback(result);
             }).catch(function(error) {
-                onCallback && onCallback({error: 'Server error'});
+                onCallback && onCallback({error: error});
             });
         }
     }
