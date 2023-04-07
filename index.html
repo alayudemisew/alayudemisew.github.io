@@ -12,8 +12,8 @@
     <title></title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        function SendData(text) {
-            Telegram.WebApp.sendData(new Date().toString());
+        function SendData() {
+            Telegram.WebApp.sendData('Hello Abebe, now is ' + new Date().toString());
         }
     </script>
 
@@ -21,7 +21,7 @@
 
 <body class="" style="visibility: hidden;">
 
-    <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot</button>
+    <button id="data_btn" onclick="SendData()">Send current time to bot</button>
 
 
 </body>
